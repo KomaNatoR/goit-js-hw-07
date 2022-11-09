@@ -47,9 +47,9 @@ function onClickOpenModalPicture(e) {
         if (e.code !== 'Escape') {
             return;
         }
-
+console.log(instance.close);
         instance.close();
         // console.dir(e.code);
     }
 }
-
+window.removeEventListener('keydown', onEscCloseModal);
