@@ -42,13 +42,14 @@ function onClickOpenModalPicture(e) {
     console.dir(instance);
 
     window.addEventListener('keydown', onEscCloseModal);
-}
+    
+    function onEscCloseModal(e) {
+        if (e.code !== 'Escape') {
+            return;
+        }
 
-function onEscCloseModal(e) {
-    if (e.code !== 'Escape') {
-        return;
+        instance.close();
+        // console.dir(e.code);
     }
-
-    instance.close();
-    // console.dir(e.code);
 }
+
