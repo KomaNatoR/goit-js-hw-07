@@ -24,11 +24,17 @@ listEl.addEventListener('click', onClickOpenLightbox);
 
 function onClickOpenLightbox(e) {
     e.preventDefault();
-
     if (e.target.nodeName !== 'IMG') {
     return;
     }
 
-    // show.simplelightbox();
-    console.dir(simplelightbox);
+    var lightbox = $('.gallery a').simpleLightbox(`
+        <div class="gallery">
+            <a href="images/image1.jpg"><img src="images/thumbs/thumb1.jpg" alt="" title=""/></a>
+            <a href="images/image2.jpg"><img src="images/thumbs/thumb2.jpg" alt="" title="Beautiful Image"/></a>
+        </div>
+    `);
+    show.simplelightbox();
+
+    // console.dir(simplelightbox);
 };
