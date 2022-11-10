@@ -19,3 +19,16 @@ const render = () => {
     listEl.innerHTML = arrayFromListTemplate.join('');
 };
 render();
+
+listEl.addEventListener('click', onClickOpenLightbox);
+
+function onClickOpenLightbox(e) {
+    e.preventDefault();
+
+    if (e.target.nodeName !== 'IMG') {
+    return;
+    }
+
+    // show.simplelightbox();
+    console.dir(simplelightbox);
+};
